@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_morning_ui/7/answer/ui_0724.dart';
 import 'package:flutter_morning_ui/7/ui_0724.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'flutter Demop',
+      title: 'rororoo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
