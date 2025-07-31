@@ -11,20 +11,18 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_morning_ui/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  DateTime now = DateTime.now();
+  int year = now.year;
+  int month = now.month;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  DateTime firstDay = DateTime(year, month, 1);
+  DateTime lastDay = DateTime(year, month + 1, 0);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  int lastDays = lastDay.day;
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  List<DateTime> days = List.generate(lastDays, (index) {
+    return DateTime(year, month, index + 1);
   });
+
+  print(days);
 }
